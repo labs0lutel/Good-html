@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SONORA — Открывай новую музыку</title>
+
+  <!-- Google Material Symbols (UI иконки) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- Font Awesome 6 (брендовые иконки соцсетей) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header__inner container">
+      <a href="#" class="logo">
+        <img src="logo.png" alt="SONORA" class="logo__img" />
+      </a>
+      <nav class="nav">
+        <a href="#" class="nav__link nav__link--active">Главная</a>
+        <a href="#" class="nav__link">Подборки</a>
+        <a href="#" class="nav__link">Исполнители</a>
+        <a href="#" class="nav__link">Журнал</a>
+      </nav>
+      <div class="header__actions">
+        <button class="icon-btn" aria-label="Поиск">
+          <span class="material-symbols-rounded">search</span>
+        </button>
+        <button class="icon-btn" aria-label="Меню">
+          <span class="material-symbols-rounded">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SLIDER ===== -->
+  <section class="hero" id="heroSlider">
+
+    <div class="hero__slides">
+      <div class="hero__slide hero__slide--active" style="background-image:url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=1600&q=85')">
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1600&q=85')">
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1600&q=85')">
+        <div class="hero__overlay"></div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="hero__content container">
+      <div class="hero__left">
+        <p class="hero__eyebrow">Музыка для твоего настроения</p>
+        <h1 class="hero__title">Открывай<br>новую музыку</h1>
+        <p class="hero__desc">SONORA — это место, где ты найдёшь свежие треки,<br>интересных исполнителей и атмосферные подборки<br>на любой случай.</p>
+        <a href="#" class="btn btn--primary">
+          <span class="btn__icon">
+            <span class="material-symbols-rounded">play_arrow</span>
+          </span>
+          Слушать подборки
+        </a>
+      </div>
+
+      <!-- Right panel -->
+      <div class="hero__right">
+
+        <!-- "Сейчас слушают" панель -->
+        <div class="hero__panel">
+          <p class="hero__panel-label">Сейчас слушают</p>
+          <div class="hero__track hero__track--active">
+            <div class="hero__track-info">
+              <span class="hero__track-name">Night Drive</span>
+              <span class="hero__track-artist">M83</span>
+            </div>
+            <svg class="hero__track-bars" width="22" height="22" viewBox="0 0 18 18" fill="currentColor">
+              <rect x="0"  y="6"  width="3" height="12" rx="1"/>
+              <rect x="5"  y="2"  width="3" height="16" rx="1" opacity=".7"/>
+              <rect x="10" y="8"  width="3" height="10" rx="1" opacity=".5"/>
+              <rect x="15" y="4"  width="3" height="14" rx="1" opacity=".8"/>
+            </svg>
+          </div>
+          <div class="hero__track">
+            <div class="hero__track-info">
+              <span class="hero__track-name">Популярно</span>
+            </div>
+            <svg class="hero__track-bars" width="22" height="22" viewBox="0 0 18 18" fill="currentColor">
+              <rect x="0"  y="10" width="3" height="8"  rx="1" opacity=".4"/>
+              <rect x="5"  y="6"  width="3" height="12" rx="1" opacity=".4"/>
+              <rect x="10" y="12" width="3" height="6"  rx="1" opacity=".4"/>
+              <rect x="15" y="8"  width="3" height="10" rx="1" opacity=".4"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Slider dots -->
+        <div class="hero__dots" id="heroDots">
+          <button class="hero__dot hero__dot--active" data-slide="0" aria-label="Слайд 1"></button>
+          <button class="hero__dot" data-slide="1" aria-label="Слайд 2"></button>
+          <button class="hero__dot" data-slide="2" aria-label="Слайд 3"></button>
+        </div>
+
+        <!-- Now playing card -->
+        <div class="hero__now-playing">
+          <img class="hero__np-img" src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=120&q=80" alt="Night Drive">
+          <div class="hero__np-info">
+            <span class="hero__np-name">Night Drive</span>
+            <span class="hero__np-artist">M83</span>
+          </div>
+          <button class="hero__np-play" aria-label="Воспроизвести">
+            <span class="material-symbols-rounded">play_arrow</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== ПОДБОРКИ ПО НАСТРОЕНИЮ ===== -->
+  <section class="section container">
+    <div class="section__head">
+      <h2 class="section__title">Подборки по настроению</h2>
+      <a href="#" class="section__link">Все подборки →</a>
+    </div>
+    <div class="playlists">
+
+      <div class="playlist-card">
+        <div class="playlist-card__img" style="background-image:url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=400&q=80')">
+          <button class="playlist-card__play" aria-label="Слушать">
+            <span class="material-symbols-rounded">play_arrow</span>
+          </button>
+        </div>
+        <div class="playlist-card__info">
+          <span class="playlist-card__name">Ночной город</span>
+          <span class="playlist-card__count">50 треков</span>
+        </div>
+      </div>
+
+      <div class="playlist-card">
+        <div class="playlist-card__img" style="background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&q=80')">
+          <button class="playlist-card__play" aria-label="Слушать">
+            <span class="material-symbols-rounded">play_arrow</span>
+          </button>
+        </div>
+        <div class="playlist-card__info">
+          <span class="playlist-card__name">Путешествия</span>
+          <span class="playlist-card__count">47 треков</span>
+        </div>
+      </div>
+
+      <div class="playlist-card">
+        <div class="playlist-card__img" style="background-image:url('https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?w=400&q=80')">
+          <button class="playlist-card__play" aria-label="Слушать">
+            <span class="material-symbols-rounded">play_arrow</span>
+          </button>
+        </div>
+        <div class="playlist-card__info">
+          <span class="playlist-card__name">Дождь</span>
+          <span class="playlist-card__count">42 трека</span>
+        </div>
+      </div>
+
+      <div class="playlist-card">
+        <div class="playlist-card__img" style="background-image:url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80')">
+          <button class="playlist-card__play" aria-label="Слушать">
+            <span class="material-symbols-rounded">play_arrow</span>
+          </button>
+        </div>
+        <div class="playlist-card__info">
+          <span class="playlist-card__name">Уют</span>
+          <span class="playlist-card__count">38 треков</span>
+        </div>
+      </div>
+
+      <div class="playlist-card">
+        <div class="playlist-card__img" style="background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=400&q=80')">
+          <button class="playlist-card__play" aria-label="Слушать">
+            <span class="material-symbols-rounded">play_arrow</span>
+          </button>
+        </div>
+        <div class="playlist-card__info">
+          <span class="playlist-card__name">Концентрация</span>
+          <span class="playlist-card__count">55 треков</span>
+        </div>
+      </div>
+
+      <div class="playlist-card">
+        <div class="playlist-card__img" style="background-image:url('https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=400&q=80')">
+          <button class="playlist-card__play" aria-label="Слушать">
+            <span class="material-symbols-rounded">play_arrow</span>
+          </button>
+        </div>
+        <div class="playlist-card__info">
+          <span class="playlist-card__name">Энергия</span>
+          <span class="playlist-card__count">49 треков</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== НОВЫЕ РЕЛИЗЫ ===== -->
+  <section class="section container">
+    <div class="section__head">
+      <h2 class="section__title">Новые релизы</h2>
+      <a href="#" class="section__link">Смотреть все →</a>
+    </div>
+    <div class="releases">
+
+      <div class="release-card">
+        <div class="release-card__img" style="background-image:url('https://images.unsplash.com/photo-1506157786151-b8491531f063?w=300&q=80')">
+          <button class="release-card__more" aria-label="Ещё">
+            <span class="material-symbols-rounded">more_horiz</span>
+          </button>
+        </div>
+        <span class="release-card__title">I Know</span>
+        <span class="release-card__artist">The Weeknd</span>
+      </div>
+
+      <div class="release-card">
+        <div class="release-card__img" style="background-image:url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=300&q=80')">
+          <button class="release-card__more" aria-label="Ещё">
+            <span class="material-symbols-rounded">more_horiz</span>
+          </button>
+        </div>
+        <span class="release-card__title">End of Beginning</span>
+        <span class="release-card__artist">Djo</span>
+      </div>
+
+      <div class="release-card">
+        <div class="release-card__img" style="background-image:url('https://images.unsplash.com/photo-1490750967868-88df5691cc3e?w=300&q=80')">
+          <button class="release-card__more" aria-label="Ещё">
+            <span class="material-symbols-rounded">more_horiz</span>
+          </button>
+        </div>
+        <span class="release-card__title">Another Life</span>
+        <span class="release-card__artist">Rufus Du Sol</span>
+      </div>
+
+      <div class="release-card">
+        <div class="release-card__img" style="background-image:url('https://images.unsplash.com/photo-1557804506-669a67965ba0?w=300&q=80')">
+          <button class="release-card__more" aria-label="Ещё">
+            <span class="material-symbols-rounded">more_horiz</span>
+          </button>
+        </div>
+        <span class="release-card__title">Escapism.</span>
+        <span class="release-card__artist">Raye</span>
+      </div>
+
+      <div class="release-card">
+        <div class="release-card__img" style="background-image:url('https://images.unsplash.com/photo-1616763355548-1b606f439f86?w=300&q=80')">
+          <button class="release-card__more" aria-label="Ещё">
+            <span class="material-symbols-rounded">more_horiz</span>
+          </button>
+        </div>
+        <span class="release-card__title">Greedy</span>
+        <span class="release-card__artist">Tate McRae</span>
+      </div>
+
+      <div class="release-card">
+        <div class="release-card__img" style="background-image:url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=300&q=80&sat=-100')">
+          <button class="release-card__more" aria-label="Ещё">
+            <span class="material-symbols-rounded">more_horiz</span>
+          </button>
+        </div>
+        <span class="release-card__title">About You</span>
+        <span class="release-card__artist">The 1975</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__inner container">
+      <a href="#" class="logo">
+        <img src="logo.png" alt="SONORA" class="logo__img logo__img--footer" />
+      </a>
+      <nav class="footer__nav">
+        <a href="#" class="footer__link">Главная</a>
+        <a href="#" class="footer__link">Подборки</a>
+        <a href="#" class="footer__link">Исполнители</a>
+        <a href="#" class="footer__link">Журнал</a>
+      </nav>
+      <div class="footer__socials">
+        <a href="#" class="social-icon" aria-label="Spotify"><i class="fa-brands fa-spotify"></i></a>
+        <a href="#" class="social-icon" aria-label="ВКонтакте"><i class="fa-brands fa-vk"></i></a>
+        <a href="#" class="social-icon" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+      <p class="footer__tagline">Больше, чем просто музыка</p>
+    </div>
+  </footer>
+
+  <script src="slider.js"></script>
+</body>
+</html>
